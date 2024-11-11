@@ -5,6 +5,9 @@ import LogoTicker from "@/components/LogoTicker";
 import Feature from "@/components/Feature";
 import { ProductShowcase } from "@/components/ProductShowcase";
 import FAQs from "@/components/FAQs";
+
+import CallToAction from "@/components/CallToAction";
+import Footer from "@/components/Footer";
 export default function Home() {
   return (
   <div>
@@ -15,7 +18,8 @@ export default function Home() {
 <Feature/>
 <ProductShowcase/>
 <FAQs/>
-
+<CallToAction/>
+<Footer/>
 
   </div>
   );
