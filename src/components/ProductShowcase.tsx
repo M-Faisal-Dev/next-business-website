@@ -9,8 +9,20 @@ export const ProductShowcase = () => {
 
 <p className="text-xl text-center text-white/70 mt-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid ab laudantium quibusdam excepturi voluptatibus mollitia perspiciatis, eum cupiditate qui aspernatur recusandae sint cum ipsam quisquam numquam veniam aperiam ipsum obcaecati?</p>
 </div>
+
+
+
+
+<div className="flex justify-center mt-10 sm:mt-14">
+          <Image
+            className="w-full "
+            src={appScreen}
+            alt="The Product screenshot"
+            priority
+          />
+        </div>
       </div>
-      <Image className="mt-14" src = {appScreen} alt = "The Product screenshot"/>
+     
     </div>
   );
 };
