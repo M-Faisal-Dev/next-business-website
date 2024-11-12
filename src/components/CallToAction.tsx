@@ -1,15 +1,46 @@
-import React from 'react';
-import hilix2 from "../assets/images/helix2.png"
-import emojiStar from "../assets/images/emojistar.png"
+"use client"
+import React, { useRef, useEffect } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import Image from "next/image";
+import hilix2 from "../assets/images/helix2.png";
+import emojiStar from "../assets/images/emojistar.png";
 
-import Image from "next/image"
+const CallToAction = () => {
+  // Correcting useRef to handle null initialization
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
-function CallToAction() {
+  // Using useScroll inside the component
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ['start end', 'end end']
+  });
+
+  // Using useTransform to map scrollYProgress to translateY
+  const translateY = useTransform(scrollYProgress, [0, 1], [-80, 80]);
+
+  useEffect(() => {
+    // Subscribing to scrollYProgress change
+    const unsubscribe = scrollYProgress.onChange(value => {
+      console.log(value);
+    });
+
+    return () => {
+      unsubscribe(); // Clean up subscription
+    };
+  }, [scrollYProgress]);
+
   return (
-    <div className="bg-black text-white sm:py-24 py-[72px] text-center">
+    <div className="bg-black text-white sm:py-24 py-[72px] text-center" ref={containerRef}>
       <div className="container relative mx-auto max-w-xl px-6">
-<Image src={hilix2} className='absolute top-6 left-[calc(100%+36px)]' alt=''/>
-<Image src={emojiStar} className='absolute -top-[120px] right-[calc(100%+24px)]' alt=''/>
+        <motion.div style={{translateY }}>
+          <Image src={hilix2} className="absolute top-6 left-[calc(100%+36px)]" alt="" />
+        </motion.div>
+
+ <motion.div style={{translateY}}>
+ <Image src={emojiStar} className="absolute -top-[120px] right-[calc(100%+24px)]" alt="" />
+
+ </motion.div>
+       
 
         <h2 className="font-bold text-4xl sm:text-5xl tracking-tighter">Get instant access</h2>
         <p className="text-lg sm:text-xl text-white/70 mt-5 leading-relaxed">
@@ -30,6 +61,6 @@ function CallToAction() {
       </div>
     </div>
   );
-}
+};
 
 export default CallToAction;

@@ -1,15 +1,16 @@
+"use client"
 import Link from 'next/link'
 import React from 'react'
 import ArrowIcon from "../assets/icons/arrow-w.svg"
 import messageImage from "../assets/images/message.png"
 import curserImage from "../assets/images/cursor.png"
-
+import {motion} from "framer-motion"
 
 
 import Image from "next/image"
 function MainBanner() {
   return (
-    <div className='bg-black text-white relative overflow-clip py-[72px] sm:py-24'
+    <div className='bg-black text-white relative overflow-clip overflow-x-hidden py-[72px] sm:py-24'
     style={{
       background: 'linear-gradient(to bottom, #000, #200D42 34%, #4F21A1 65%, #A36EDB 82%)',
     }}
@@ -58,10 +59,20 @@ function MainBanner() {
       <br />
       at the time 
      </h1>
-     <Image src={curserImage} height="200" width = "200" className='absolute right-[576px] top-[108px] hidden sm:inline' alt = "Curser Image"/>
-     <Image src={messageImage} height="200" width = "200" className='absolute top-[56px] left-[578px]
-     hidden sm:inline' alt = "Message Image"/>
+     <motion.div className='absolute right-[576px] top-[108px] hidden sm:inline'
+     drag
+     dragSnapToOrigin
+     >
+     <Image src={curserImage} height="200" width = "200" className='max-w-none' draggable="false" alt = "Curser Image"/>
 
+     </motion.div>
+
+     <motion.div className='absolute top-[56px] left-[578px]
+     hidden sm:inline'
+     drag
+     dragSnapToOrigin>
+     <Image src={messageImage} height="200" width = "200" className='max-w-none' draggable="false" alt = "Message Image"/>
+</motion.div>
      </div>
      </div>
 <div className='flex justify-center'>
