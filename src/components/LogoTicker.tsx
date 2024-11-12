@@ -23,7 +23,7 @@ function LogoTicker() {
     <div className="bg-black text-white py-[72px] sm:py-24">
       <div className="container mx-auto relative">
         <h2 className="text-xl text-center text-white/70">
-          Trusted by the world's most innovative teams
+          Trusted by the worlds most innovative teams
         </h2>
         
         <div className="overflow-hidden mt-9 relative flex items-center">

@@ -4,7 +4,7 @@ import Image from "next/image";
 import {motion, useScroll, useTransform} from "framer-motion"
 import { useEffect, useRef } from "react";
 
-export const ProductShowcase = () => {
+const ProductShowcase = () => {
 
   const appImage = useRef<HTMLImageElement>(null);
   const {scrollYProgress} = useScroll({
@@ -57,3 +57,6 @@ style={{
     </div>
   );
 };
+
+
+export default ProductShowcase;

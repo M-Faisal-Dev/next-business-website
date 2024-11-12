@@ -1,3 +1,4 @@
+"use client"
 import InstaIcon from "../assets/icons/insta.svg";
 import XSocial from "../assets/icons/x-social.svg";
 import TiktokIcon from "../assets/icons/tiktok.svg";

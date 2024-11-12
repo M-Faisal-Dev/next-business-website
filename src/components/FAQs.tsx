@@ -4,7 +4,7 @@ import PlusIcon from "../assets/icons/plus.svg"
 import MinusIcon from "../assets/icons/minus.svg"
 import { AnimatePresence, motion } from 'framer-motion'
 
-import clsx from 'clsx';
+
 const items = [
   {
     question: "What payment methods do you accept?",
@@ -71,7 +71,7 @@ const AccordingItem = ({question, answer} : {question: string; answer: string;})
 }
 
 
-function FAQ() {
+export function FAQs() {
   return (
     <div className='bg-black text-white bg-gradient-to-b from-[#5D2CA8] to-black py-[72px] sm:py-24'>
       <div className='container'>
@@ -88,4 +88,4 @@ function FAQ() {
   )
 }
 
-export default FAQ
+
