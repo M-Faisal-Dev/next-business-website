@@ -4,6 +4,7 @@ import Image from "next/image"
 import logoImage from "../assets/images/logosaas.png"
 import MenuIcon from "../assets/icons/menu.svg"
 import Link from "next/link"
+
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -49,7 +50,7 @@ function Navbar() {
       menuOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
     } text-white space-y-4 flex justify-center items-center flex-col p-4`}
   >
-    <a href="/" className="block opacity-60 hover:opacity-100 transition">Home</a>
+    <a href="#" className="block opacity-60 hover:opacity-100 transition">Home</a>
     <a href="https://www.faisaldev.tech/" className="block opacity-60 hover:opacity-100 transition">Services</a>
     <a href="https://www.faisaldev.tech/about" className="block opacity-60 hover:opacity-100 transition">About</a>
     <a href="https://www.faisaldev.tech/contact" className="block opacity-60 hover:opacity-100 transition">Contact</a>
