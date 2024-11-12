@@ -22,7 +22,7 @@ function Footer() {
             </a>
           </li>
           <li>
-            <a href="https://linkedin.com" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/muhammad-faisal-224427210/" aria-label="LinkedIn">
               <LinkedinIcon className="w-6 h-6 fill-current text-white/60 hover:text-white" />
             </a>
           </li>

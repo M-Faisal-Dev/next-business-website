@@ -49,12 +49,12 @@ function Navbar() {
       menuOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
     } text-white space-y-4 flex justify-center items-center flex-col p-4`}
   >
-    <a href="#home" className="block opacity-60 hover:opacity-100 transition">Home</a>
-    <a href="#services" className="block opacity-60 hover:opacity-100 transition">Services</a>
-    <a href="#about" className="block opacity-60 hover:opacity-100 transition">About</a>
-    <a href="#contact" className="block opacity-60 hover:opacity-100 transition">Contact</a>
+    <a href="/" className="block opacity-60 hover:opacity-100 transition">Home</a>
+    <a href="https://www.faisaldev.tech/" className="block opacity-60 hover:opacity-100 transition">Services</a>
+    <a href="https://www.faisaldev.tech/about" className="block opacity-60 hover:opacity-100 transition">About</a>
+    <a href="https://www.faisaldev.tech/contact" className="block opacity-60 hover:opacity-100 transition">Contact</a>
     <div className="py-2">
-      <Link href="#" className="bg-white text-black px-4 py-2 rounded-md">Get a Project</Link>
+      <Link href="https://github.com/M-Faisal-Dev" className="bg-white text-black px-4 py-2 rounded-md">Get a Project</Link>
     </div>
   </div>
 )}

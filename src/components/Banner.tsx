@@ -12,8 +12,8 @@ function Banner() {
     <p className="font-medium">
         <span className="hidden sm:inline">Welcome to the Future of Innovation and Excellence!</span>
     </p>
-      <Link className="underline underline-offset-4 font-medium" href="#">
-        <div className="container">hello this is faisal</div>
+      <Link className="underline underline-offset-4 font-medium" href="https://www.faisaldev.tech/">
+        <div className="container">Get a Project</div>
       </Link> 
     </div>
     
