@@ -15,7 +15,7 @@ const ProductShowcase = () => {
     ]
   })
   useEffect(()=>{
-    scrollYProgress.on("change", (latestValue)=>{
+    scrollYProgress.on("change", (latestValue : any)=>{
       console.log("latest", latestValue)
     })
   })
